@@ -1,5 +1,5 @@
-import com.github.szsoftware.gradle.TargetsCargo
-import org.gradle.kotlin.dsl.implementation
+//import com.github.szsoftware.gradle.TargetsCargo
+//import org.gradle.kotlin.dsl.implementation
 
 plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
