@@ -22,7 +22,7 @@ fun main() {
 
     jvmRegisteredThreads()
 
-    while (true) { /* ignored */ }
+    //while (true) { /* ignored */ }
 
     println()
     println("I'm calling now libMain() in native library and leave JavaWorld for a moment.")

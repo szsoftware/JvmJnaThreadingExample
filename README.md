@@ -20,6 +20,15 @@ jna developers should be interested in
 src/main/kotlin/uniffi/example_library/example_library.kt
 where all jna library loading magic happens.
 
+In a terminal you can additionaly examine PID and TID with command like this:
+
+(sudo) /usr/lib/jvm/java-17-openjdk-amd64/bin/jhsdb clhsdb --pid 123456
+hsdb> threads
+
+There is a related google discussion with some useful insights and conclusions:
+
+[https://groups.google.com/g/jna-users/c/OvSWRSiYmZo](https://groups.google.com/g/jna-users/c/OvSWRSiYmZo)
+
 After running the application you should see something like this:
 
 ![screenshot](app/JvmJnaThreadingExample_sampleOutput.png)
