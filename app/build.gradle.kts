@@ -48,6 +48,8 @@ cargoUniffi {
 
 dependencies {
 
+    implementation("net.java.dev.jna:jna:5.16.0")
+
     // Use the Kotlin JUnit 5 integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 
