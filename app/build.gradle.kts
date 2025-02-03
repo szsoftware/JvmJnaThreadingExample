@@ -78,3 +78,17 @@ tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+tasks.register<DefaultTask>("runNativeSampleApp") {
+    group = "application" // Task wird zur Gruppe "application" hinzugefügt.
+    description = "Runs the sample application, written in Rust."
+
+    notCompatibleWithConfigurationCache("")
+
+    doLast {
+        println("Running the sample application...")
+        exec {
+            commandLine("${projectDir}/src/main/resources/linux-x86-64/sample-app")
+        }
+    }
+}
