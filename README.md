@@ -19,3 +19,7 @@ For transparency I mentioned the default options due to lack of docs for the plu
 jna developers should be interested in
 src/main/kotlin/uniffi/example_library/example_library.kt
 where all jna library loading magic happens.
+
+After running the application you should see something like this:
+
+![screenshot](app/JvmJnaThreadingExample_sampleOutput.png)
