@@ -92,3 +92,23 @@ tasks.register<DefaultTask>("runNativeSampleApp") {
         }
     }
 }
+
+tasks.register<DefaultTask>("buildSampleApp") {
+    group = "rust" // Task wird zur Gruppe "application" hinzugefügt.
+    description = "Runs the sample application, written in Rust."
+
+    notCompatibleWithConfigurationCache("")
+
+    doLast {
+        println("Building the sample application...")
+        exec {
+            workingDir("${projectDir}/rust")
+            commandLine("cargo", "build")
+        }
+
+        copy {
+            from("${projectDir}/rust/target/debug/sample-app")
+            into("${projectDir}/src/main/resources/linux-x86-64")
+        }
+    }
+}
